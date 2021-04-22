@@ -9,8 +9,8 @@ obj_val_current = obj_x_val + obj_y_val + obj_z_val;
 
 T0= 1000      #TEMPERATURA INICIAL
 temp_plot= T0 #TEMPERATURA PARA PLOTAR
-M=1         #QUANTAS VEZES DIMINUIR A TEMPERATURA
-N=1          #QUANTAS VEZES BUSCAR VIZINHO(PARA CADA M RODA N VEZES)
+M=10         #QUANTAS VEZES DIMINUIR A TEMPERATURA
+N=100          #QUANTAS VEZES BUSCAR VIZINHO(PARA CADA M RODA N VEZES)
 alpha=0.85    #QUANTOS VOU DIMINUIR A TEMPERATURA (1-alpha)
 K=0.1         
 
@@ -58,6 +58,8 @@ obj_val = []  # PARA PLOTAR OBJ_VAL PARA CADA M
   
 endfor  
 
+
+solution_final = solution_current
 plot(temp,obj_val)
 
 
