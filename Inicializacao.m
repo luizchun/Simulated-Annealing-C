@@ -159,6 +159,10 @@ for i=1:nturmas*nduplasaula #i de 1-14
      endfor
 endfor 
 
+header='feat1;feat2;feat3;feat4;feat5'; 
+dlmwrite('ArquivosExcel\SolucaoInicial.csv',solucaoinicial,';',1,1);
+dlmwrite('ArquivosExcel\SolucaoInicial.csv',header,';',0,0,'-append');
+
 ##
 ##solucaoinicial
 

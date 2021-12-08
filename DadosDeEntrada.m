@@ -1,5 +1,5 @@
 
-dadosdeentrada= dlmread('ArquivosExcel\DadosEntrada.csv',';',1,0)
+dadosdeentrada= dlmread('ArquivosExcel\DadosEntrada.csv',';',1,0);
 
 e = size(dadosdeentrada); #pega o tamanho 21x22 
 f = e(1,1); # tamanho linha 21

@@ -62,62 +62,7 @@
 ##111	Eletrônica Analógica - ELAS3 PRÁTICA	P	ALEXANDRE	4
 ##	Tecnologias de Usinagem  -TUSS3 PRÁTICA	P	EDER	4
 
-aulascargas = [1	2	1
-2	2	1
-3	2	1
-4	2	1
-5	2	1
-6	2	1
-7	4	2
-8	4	2
-9	2	2
-10	2	2
-11	2	3
-12	2	3
-13	2	3
-14	2	3
-15	2	3
-16	2	3
-17	2	3
-18	2	4
-19	2	4
-20	2	4
-21	2	4
-22	2	4
-23	2	4
-24	2	4
-25	2	4
-26	2	5
-27	4	5
-28	2	5
-29	2	5
-30	2	6
-31	2	6
-32	4	6
-33	2	6
-34	4	6
-35	2	6
-36	2	6
-37	2	6
-38	4	7
-39	4	7
-40	4	7
-41	4	7
-42	4	7
-43	4	7
-44	4	2
-45	2	3
-46	2	4
-47	2	5
-48	4	5
-49	2	5
-101	4	1
-103	4	2
-105	4	1
-107	4	3
-109	4	5
-111	4	6
-];
+aulascargas = dlmread('ArquivosExcel\AulasCarga.csv',';',1,0);
 #aulascargas: DISCIPLINAS,quantidade de aulas, e seu semestre
 
 

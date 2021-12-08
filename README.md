@@ -1,2 +1,0 @@
-# RecozimentoSimulado
-TCC
