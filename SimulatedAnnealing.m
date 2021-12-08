@@ -3,63 +3,74 @@
 #include <string.h>
 #include <gsl/gsl_siman.h>
 
-run("Play.m")
+Inicializacao;
+
+#run("Sorteador.m"); #APLICA PERTUBACAO
+run("Play.m"); #CALCULA PONTUAÇÃO
 
 obj_val_current = obj_x_val + obj_y_val + obj_z_val;
 
-T0= 1000      #TEMPERATURA INICIAL
-temp_plot= T0 #TEMPERATURA PARA PLOTAR
-M=5          #QUANTAS VEZES DIMINUIR A TEMPERATURA
-N=2         #QUANTAS VEZES BUSCAR VIZINHO(PARA CADA M RODA N VEZES)
-alpha=0.85    #QUANTOS VOU DIMINUIR A TEMPERATURA (1-alpha)
-K=0.1         
 
-temp = []     # PARA PLOTAR TEMP
-obj_val = []  # PARA PLOTAR OBJ_VAL PARA CADA M
-
+T0= 10000  ;    #TEMPERATURA INICIAL
+TI=T0;
+temp_plot= T0 ;#TEMPERATURA PARA PLOTAR
+M=10       ;    #QUANTAS VEZES DIMINUIR A TEMPERATURA
+N=20     ;      #QUANTAS VEZES BUSCAR VIZINHO(PARA CADA M RODA N VEZES)
+alpha=0.85;    #QUANTOS VOU DIMINUIR A TEMPERATURA (1-alpha)
+K=0.1     ;    
+pp=0;
+temp = []   ;  # PARA PLOTAR TEMP
+obj_val = [];  # PARA PLOTAR OBJ_VAL PARA CADA M
 
 #SIMULATED ANNEALING
 
-  for(i=1:M)
+  for(rr=1:M) 
   
-    for(j=1:N)
-    
-     run("Play.m")
+    for(uu=1:N)
+     obj_val_possible = 0;
+     Play;
+     #run("Play.m")
      obj_val_possible = obj_x_val + obj_y_val + obj_z_val;
      
-     solution_current = solucaoinicial
+     solution_current = solucaoinicial;
      
-     rand_num = rand(1)
+     rand_num = rand(1);
      
-     formula = 1/(exp((obj_val_possible - obj_val_current)/T0))
+     formula = (exp((-(obj_val_possible - obj_val_current))/TI));
             
           if(obj_val_possible <= obj_val_current)
               
                obj_val_current = obj_val_possible;
                solution_current = solucaoinicial;
 
-           
            else 
-            if rand_num <= formula
+            if rand_num <= formula;
                  obj_val_current = obj_val_possible;
                  solution_current = solucaoinicial;
-          
-            else 
-                   obj_val_current = obj_val_current;
-                   solution_current = solution_current;
+                 
             endif
-          endif      
-          temp(i)=T0 
-          obj_val(i)= obj_val_current
-      
+        endif  
+          printf("Solução: %d |", pp);
+          printf("Pontuação C: %d |", obj_val_current);
+          printf("Pontuação P: %d |", obj_val_possible);
+          printf("Formula: %d |", formula);
+          printf("Rand:%d |",rand_num);
+          printf("M:%d ", rr);
+          printf("N:%d |",uu);
+          printf("T:%d\n",T0);
+          T0=alpha*T0; 
+          temp(rr,uu)=T0;
+          obj_val(rr,uu)= obj_val_possible;
+          pp=pp+1;
     endfor
-    T0 = alpha*T0
-  
+      
 endfor  
-
-
+obj_val
+temp
+obj_val_current
 solution_final = solution_current
-plot(temp,obj_val)
+#plot(obj_val,temp);
+
 
 
 

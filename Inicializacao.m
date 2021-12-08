@@ -159,6 +159,8 @@ for i=1:nturmas*nduplasaula #i de 1-14
      endfor
 endfor 
 
+##
+##solucaoinicial
 
 #VERIFICADOR DE ERROS DAS SALAS
 #VERIFICAR SALAS IGUAIS >100 COM DISCIPLINAS > 100
@@ -166,8 +168,4 @@ endfor
 #VERIFICAR PROFESSORES IGUAIS 
 #VERIFICAR FPA 
 #PEGAR POSIÇÃO DO VETOR DA PENALIDADE
-
-solucaoinicial
-
-
 

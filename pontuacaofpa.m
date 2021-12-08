@@ -51,20 +51,19 @@ for xx=17:22 #PERCORRE AS COLUNAS DA MATRIZ DE ENTRADA
                         pontuacaofpa(linhapontuacaofpa,1)=h;
                         pontuacaofpa(linhapontuacaofpa,2)=o;
                         pontuacaofpa(linhapontuacaofpa,3)= diasemana1;
-                        pontuacaofpa(linhapontuacaofpa,4)= 500;
+                        pontuacaofpa(linhapontuacaofpa,4)= 1;
                         linhapontuacaofpa++;
                         endif;
                       
                   endfor
                 diasemana2++; ##FLAG PARA INDICAR O DIA DA SEMANA DA SOLUCAOINICIAL O
-            endfor
+            endfor;
                 diasemana2=1;
         endfor;
     diasemana1++; ##FLAG PARA INDICAR O DIA DA SEMANA DA MATRIZ DE ENTRADA  XX
     
 endfor;
 
-pontuacaofpa;
 
 
    
