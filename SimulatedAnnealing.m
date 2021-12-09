@@ -6,7 +6,7 @@
 Inicializacao;
 
 #run("Sorteador.m"); #APLICA PERTUBACAO
-run("Play.m"); #CALCULA PONTUAÇÃO
+Play; #CALCULA PONTUAÇÃO
 
 obj_val_current = obj_x_val + obj_y_val + obj_z_val;
 
@@ -14,7 +14,7 @@ obj_val_current = obj_x_val + obj_y_val + obj_z_val;
 T0= 10000  ;    #TEMPERATURA INICIAL
 TI=T0;
 temp_plot= T0 ;#TEMPERATURA PARA PLOTAR
-M=10       ;    #QUANTAS VEZES DIMINUIR A TEMPERATURA
+M=50       ;    #QUANTAS VEZES DIMINUIR A TEMPERATURA
 N=20     ;      #QUANTAS VEZES BUSCAR VIZINHO(PARA CADA M RODA N VEZES)
 alpha=0.85;    #QUANTOS VOU DIMINUIR A TEMPERATURA (1-alpha)
 K=0.1     ;    
@@ -43,12 +43,12 @@ obj_val = [];  # PARA PLOTAR OBJ_VAL PARA CADA M
                obj_val_current = obj_val_possible;
                solution_current = solucaoinicial;
 
-           else 
-            if rand_num <= formula;
-                 obj_val_current = obj_val_possible;
-                 solution_current = solucaoinicial;
-                 
-            endif
+##           else 
+##            if rand_num <= formula;
+##                 obj_val_current = obj_val_possible;
+##                 solution_current = solucaoinicial;
+##                 
+##            endif
         endif  
           printf("Solução: %d |", pp);
           printf("Pontuação C: %d |", obj_val_current);
@@ -62,12 +62,14 @@ obj_val = [];  # PARA PLOTAR OBJ_VAL PARA CADA M
           temp(rr,uu)=T0;
           obj_val(rr,uu)= obj_val_possible;
           pp=pp+1;
+          #solution_current
     endfor
       
 endfor  
 obj_val
 temp
 obj_val_current
+
 solution_final = solution_current
 
 dlmwrite('ArquivosExcel\SolucaoFinal.csv',solution_final,';',1,1);

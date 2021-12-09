@@ -10,7 +10,7 @@
 
                 #jj=randperm(14,1); #LINHA
                 tt=randperm(14,1); #LINHA
-                #ll=randperm(6,1); #COLUMA
+                ll=randperm(6,1); #COLUMA
                 aa=randperm(6,1); #COLUMA
                 cc=randi([0,1]);  #SORT 0 1
                 

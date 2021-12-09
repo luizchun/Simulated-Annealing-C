@@ -1,10 +1,10 @@
-clear solucaoinicial;
+#clear solucaoinicial;
 clear pontuacaofpa;
 clear pontuacaosalas;
 clear pontuacaoprofessores;
 
-run("Inicializacao.m");
-Inicializacao;
+##run("Inicializacao.m");
+##Inicializacao;
 
 run("pontuacaofpa.m");
 pontuacaofpa;
