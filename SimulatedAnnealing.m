@@ -32,7 +32,7 @@ obj_val = [];  # PARA PLOTAR OBJ_VAL PARA CADA M
      #run("Play.m")
      obj_val_possible = obj_x_val + obj_y_val + obj_z_val;
      
-     solution_current = solucaoinicial;
+     #solution_current = solucaoinicial;
      
      rand_num = rand(1);
      
@@ -69,6 +69,9 @@ obj_val
 temp
 obj_val_current
 solution_final = solution_current
+
+dlmwrite('ArquivosExcel\SolucaoFinal.csv',solution_final,';',1,1);
+
 #plot(obj_val,temp);
 
 

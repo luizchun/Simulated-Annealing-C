@@ -8,14 +8,16 @@
      
     #for yu=1:1 #i de 1-14
 
-                jj=randperm(14,1); #LINHA
+                #jj=randperm(14,1); #LINHA
                 tt=randperm(14,1); #LINHA
-                ll=randperm(6,1); #COLUMA
+                #ll=randperm(6,1); #COLUMA
                 aa=randperm(6,1); #COLUMA
                 cc=randi([0,1]);  #SORT 0 1
                 
-                  if ((finalpontuacaosalas(ii,1)==jj && finalpontuacaosalas(ii,2)-1==oo(ll)) )#|| (finalpontuacaoprofessores(fft,1)==jj && finalpontuacaoprofessores(fft,2)-1==oo(ll)))
+                  #if ((finalpontuacaosalas(ii,1)==jj && finalpontuacaosalas(ii,2)-1==oo(ll)) )#|| (finalpontuacaoprofessores(fft,1)==jj && finalpontuacaoprofessores(fft,2)-1==oo(ll)))
                           
+                          jj=finalpontuacaosalas(ii,1);
+                          oo(ll)=finalpontuacaosalas(ii,2)-1;
                     aux13=solucaoinicial(jj,oo(ll)-1:oo(ll)+1);
                           
                     if mod(jj,2)==0 
@@ -33,7 +35,7 @@
                       endif  
                    endif    
                             
-                  endif      
+               #   endif      
                  
        # endfor
     #endfor      
