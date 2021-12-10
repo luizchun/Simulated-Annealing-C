@@ -62,7 +62,8 @@ obj_val = [];  # PARA PLOTAR OBJ_VAL PARA CADA M
           temp(rr,uu)=T0;
           obj_val(rr,uu)= obj_val_possible;
           pp=pp+1;
-          #solution_current
+          solucaoinicial
+          solution_current
     endfor
       
 endfor  
